@@ -4,7 +4,7 @@ Small .NET utility for displaying an user warning about using of cookies on the 
 
 # Installation
 
-Install via Nuget (not yet available, soon ...).  
+Install via [Nuget](https://www.nuget.org/packages/EUCookies.NET/)
 
 First include JS and CSS files in header, bottom of the body or in the Bundle config:
 
