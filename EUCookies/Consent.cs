@@ -1,7 +1,5 @@
 ﻿using System.IO;
-using System.Net.Mail;
 using System.Reflection;
-using System.Web;
 using EUCookies.Localizations;
 
 namespace EUCookies
@@ -13,6 +11,9 @@ namespace EUCookies
 
 		private ICookieService _cookieService = new CookieService();
 
+		/// <summary>
+		/// Creates an instance of Consent class
+		/// </summary>
 		public static Consent Instance
 		{
 			get 
@@ -24,6 +25,14 @@ namespace EUCookies
 			}
 		}
 
+		/// <summary>
+		/// Inject HTML that displays warning
+		/// </summary>
+		/// <param name="linkUrl">URL for 'learn more'</param>
+		/// <param name="overrideMainText">Override text for mail message</param>
+		/// <param name="overrideLearnMoreText">Override text for 'Learn more' link</param>
+		/// <param name="overrideOkText">Override text for OK button</param>
+		/// <returns>HTML string that displays message on the bottom of the web page</returns>
 	    public string Install(string linkUrl = null, string overrideMainText = null, string overrideLearnMoreText = null, string overrideOkText = null)
 		{
 			if (_cookieService.Read(CookieName) != "true")
@@ -51,6 +60,11 @@ namespace EUCookies
 			return string.Empty;
 		}
 
+		/// <summary>
+		/// Replace service for reading/writing cookies. Used for testing, where HttpContext is not available
+		/// </summary>
+		/// <param name="service">Implementation of ICookieService interface</param>
+		/// <returns>return this, just so it can be used fluently:)</returns>
 	    public Consent SetCookieService(ICookieService service)
 	    {
 		    _cookieService = service;

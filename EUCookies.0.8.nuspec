@@ -5,9 +5,10 @@
         <version>0.8</version>
         <title>EUCookies.NET</title>
         <authors>hhrvoje</authors>
+        <projectUrl>https://github.com/hudo/EUCookiesNET</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Displays a cookie warning at the bottom of the web page where user can accept it.</description>
-        <summary>Display cookie warning to user</summary>
+        <summary>Display cookie warning to the user</summary>
         <language>en-US</language>
         <dependencies>
             <dependency id="jquery.cookie" version="1.3" />
