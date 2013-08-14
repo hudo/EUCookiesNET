@@ -1,0 +1,22 @@
+﻿@using EUCookies
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>EUCookies test</title>
+		<link href="~/Content/cookies_eu.css" rel="stylesheet" />
+		<script src="~/Scripts/jquery-2.0.3.js"></script>
+		<script src="~/Scripts/jquery.cookie.js"></script>
+		<script src="~/Scripts/cookies_eu.js"></script>
+	</head>
+	<body>
+		<div>
+			<h1>Hello world</h1>
+		</div>
+		@Html.Raw(Consent.Instance.Install(linkUrl:"http://www.google.com", overrideMainText:"overrided text"))
+	</body>
+</html>

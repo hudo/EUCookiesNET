@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>EUCookies.NET</id>
+        <version>0.8</version>
+        <title>EUCookies.NET</title>
+        <authors>hhrvoje</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Displays a cookie warning at the bottom of the web page where user can accept it.</description>
+        <summary>Display cookie warning to user</summary>
+        <language>en-US</language>
+        <dependencies>
+            <dependency id="jquery.cookie" version="1.3" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="EUCookies\assets\cookies_eu.css" target="content\Content\cookies_eu.css" />
+        <file src="EUCookies\assets\cookies_eu.js" target="content\Scripts\cookies_eu.js" />
+        <file src="EUCookies\bin\Release\hr-HR\EUCookies.resources.dll" target="lib\net40\hr-HR\EUCookies.resources.dll" />
+        <file src="EUCookies\bin\Release\EUCookies.dll" target="lib\net40\EUCookies.dll" />
+    </files>
+</package>
