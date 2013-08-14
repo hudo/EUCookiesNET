@@ -40,7 +40,7 @@ namespace EUCookies.Test
 			string html = _consentUnderTest.Install(linkUrl: "!link!");
 
 			Assert.IsFalse(string.IsNullOrWhiteSpace(html));
-			Assert.IsTrue(html.Contains("!link!"));
+			Assert.IsTrue(html.Contains("<a href=\"!link!\""));
 		}
 
 
@@ -50,16 +50,16 @@ namespace EUCookies.Test
 			string html = _consentUnderTest.Install(overrideMainText: "!maintext!");
 
 			Assert.IsFalse(string.IsNullOrWhiteSpace(html));
-			Assert.IsTrue(html.Contains("!maintext!"));
+			Assert.IsTrue(html.Contains("<span class=\"cookies-eu-content-holder\">!maintext!</span>"));
 		}
 
 		[TestMethod]
 		public void Install_OverrideOkText_HasNewText()
 		{
-			string html = _consentUnderTest.Install(overrideMainText: "!ok!");
+			string html = _consentUnderTest.Install(overrideOkText: "!ok!");
 
 			Assert.IsFalse(string.IsNullOrWhiteSpace(html));
-			Assert.IsTrue(html.Contains("!ok!"));
+			Assert.IsTrue(html.Contains("<button class=\"cookies-eu-ok\">!ok!</button>"));
 		}
 	}
 }
