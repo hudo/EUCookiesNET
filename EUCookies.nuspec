@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>EUCookies.NET</id>
-        <version>1.0</version>
+        <version>1.0.1</version>
         <title>EUCookies.NET</title>
         <authors>hhrvoje</authors>
         <projectUrl>https://github.com/hudo/EUCookiesNET</projectUrl>

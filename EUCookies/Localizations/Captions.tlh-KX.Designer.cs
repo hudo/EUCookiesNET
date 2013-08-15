@@ -22,14 +22,14 @@ namespace EUCookies.Localizations {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Copy_of_Captions_tlh_KX {
+    internal class Captions_tlh_KX {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Copy_of_Captions_tlh_KX() {
+        internal Captions_tlh_KX() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace EUCookies.Localizations {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EUCookies.Localizations.Copy of Captions.tlh-KX", typeof(Copy_of_Captions_tlh_KX).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EUCookies.Localizations.Captions.tlh-KX", typeof(Captions_tlh_KX).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -79,7 +79,7 @@ namespace EUCookies.Localizations {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to maHvaD chavmoH HIj QaH cookies. pong chavmoH yIlo&apos;, jIQochbe&apos; cookies malja&apos;..
+        ///   Looks up a localized string similar to maHvaD chavmoH HIj QaH cookies. pong chavmoH yIlo&apos;, jIQochbe&apos; cookies malja&apos;.
         /// </summary>
         internal static string Text {
             get {
