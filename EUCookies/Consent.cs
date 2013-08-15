@@ -29,35 +29,39 @@ namespace EUCookies
         /// Inject HTML that displays warning
         /// </summary>
         /// <param name="linkUrl">URL for 'learn more'</param>
-        /// <param name="overrideMainText">Override text for mail message</param>
-        /// <param name="overrideLearnMoreText">Override text for 'Learn more' link</param>
-        /// <param name="overrideOkText">Override text for OK button</param>
+        /// <param name="messageText">Override text for mail message</param>
+        /// <param name="learnMoreText">Override text for 'Learn more' link</param>
+        /// <param name="okText">Override text for OK button</param>
         /// <returns>HTML string that displays message on the bottom of the web page</returns>
-        public string Install(string linkUrl = null, string overrideMainText = null, string overrideLearnMoreText = null, string overrideOkText = null)
+        public string Install(string linkUrl = null, string messageText = null, string learnMoreText = null, string okText = null)
         {
             if (_cookieService.Read(CookieName) != "true")
             {
                 var assembly = Assembly.GetAssembly(typeof(Consent));
 
-                var hasLink = !string.IsNullOrWhiteSpace(linkUrl);
+                var hasLink = !IsEmpty(linkUrl);
 
                 var fileName = hasLink ? "script.html" : "scriptnolink.html";
 
-                var reader = new StreamReader(assembly.GetManifestResourceStream("EUCookies." + fileName));
-                var html = reader.ReadToEnd();
+                var html = new StreamReader(assembly.GetManifestResourceStream("EUCookies." + fileName)).ReadToEnd();
 
                 if (hasLink)
-                    html = html.Replace("{learnmore}", string.IsNullOrWhiteSpace(overrideLearnMoreText)
+                    html = html.Replace("{learnmore}", IsEmpty(learnMoreText)
                                     ? Captions.LearnMore
-                                    : overrideLearnMoreText)
+                                    : learnMoreText)
                                 .Replace("{link}", linkUrl);
 
                 return html
-                    .Replace("{text}", string.IsNullOrWhiteSpace(overrideMainText) ? Captions.Text : overrideMainText)
-                    .Replace("{ok}", string.IsNullOrWhiteSpace(overrideOkText) ? Captions.Ok : overrideOkText);
+                    .Replace("{text}", IsEmpty(messageText) ? Captions.Text : messageText)
+                    .Replace("{ok}", IsEmpty(okText) ? Captions.Ok : okText);
             }
 
             return string.Empty;
+        }
+
+        private bool IsEmpty(string text)
+        {
+            return string.IsNullOrWhiteSpace(text);
         }
 
         /// <summary>

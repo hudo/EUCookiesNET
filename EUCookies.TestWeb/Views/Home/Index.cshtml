@@ -17,6 +17,9 @@
 		<div>
 			<h1>Hello world</h1>
 		</div>
-		@Html.Raw(Consent.Instance.Install(linkUrl:"http://www.google.com", overrideMainText:"overrided text"))
+		@Html.Raw(Consent.Instance.Install(linkUrl:"http://www.google.com", 
+            messageText:"ovaj web site koristi kolačiće",
+            okText:"okej",
+            learnMoreText:"želim znati više!"))
 	</body>
 </html>
