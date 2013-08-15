@@ -54,6 +54,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Localizations\Copy of Captions.tlh-KX.Designer.cs">
+      <DependentUpon>Copy of Captions.tlh-KX.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +72,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Localizations\Copy of Captions.tlh-KX.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Copy of Captions.tlh-KX.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="scriptnolink.html" />
     <EmbeddedResource Include="script.html" />
   </ItemGroup>
