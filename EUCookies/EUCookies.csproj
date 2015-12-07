@@ -44,6 +44,11 @@
     <Compile Include="Consent.cs" />
     <Compile Include="CookieService.cs" />
     <Compile Include="ICookieService.cs" />
+    <Compile Include="Localizations\Captions.nl.Designer.cs">
+      <DependentUpon>Captions.nl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Localizations\Captions.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +72,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Localizations\Captions.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Captions.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localizations\Captions.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Captions.de.Designer.cs</LastGenOutput>
