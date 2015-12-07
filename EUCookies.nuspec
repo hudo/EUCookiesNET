@@ -19,6 +19,9 @@
         <file src="EUCookies\assets\cookies_eu.css" target="content\Content\cookies_eu.css" />
         <file src="EUCookies\assets\cookies_eu.js" target="content\Scripts\cookies_eu.js" />
         <file src="EUCookies\bin\Release\hr-HR\EUCookies.resources.dll" target="lib\net40\hr-HR\EUCookies.resources.dll" />
+        <file src="EUCookies\bin\Release\de\EUCookies.resources.dll" target="lib\net40\de\EUCookies.resources.dll" />
+        <file src="EUCookies\bin\Release\fr\EUCookies.resources.dll" target="lib\net40\fr\EUCookies.resources.dll" />
+        <file src="EUCookies\bin\Release\nl\EUCookies.resources.dll" target="lib\net40\nl\EUCookies.resources.dll" />
         <file src="EUCookies\bin\Release\EUCookies.dll" target="lib\net40\EUCookies.dll" />
     </files>
 </package>
