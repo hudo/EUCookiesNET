@@ -1,1 +1,11 @@
 packages/
+EUCookies/bin/*
+EUCookies/obj/*
+EUCookies.Test/bin/*
+EUCookies.Test/obj/*
+EUCookies.TestWeb/bin/*
+EUCookies.TestWeb/obj/*
+.vs/config/applicationhost.config
+.vs/EUCookies/v14/.suo
+EUCookies.sln.DotSettings.user
+EUCookies.sln.GhostDoc.xml
